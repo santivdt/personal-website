@@ -1,0 +1,4 @@
+
+#ignore public files
+/public/*
+/node_modules/*

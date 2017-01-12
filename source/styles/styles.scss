@@ -1,0 +1,145 @@
+html {
+  font-family: Calibri, Trebuchet, sans-serif;
+}
+
+.row {
+  margin-top: 10%;
+
+  &.no-margin {
+    margin: 0;
+  }
+}
+
+p.heading {
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-family: Roboto, sans-serif;
+  margin-top: 0;
+}
+
+p.text {
+  &.no-top-margin {
+    margin-top: 0;
+  }
+}
+
+
+.photo-santi {
+  width: 100%;
+}
+
+p.social-icons {
+  font-size: 16px;
+
+
+  a {
+    color: black;
+    margin-left: 2rem;
+
+    &:visited, &:active {
+      color: black;
+    }
+
+    &:hover {
+      color: #CCC;
+    }
+  }
+}
+
+
+.italic {
+  font-style: italic;
+  font-size: 12px;
+  color: #CCC;
+}
+
+
+//TOOLTIP
+
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+
+
+//CARD ADJUSTMENTS
+.card-title {
+  font-size: 15px!important;
+  text-transform: uppercase;
+}
+
+img.activator {
+  width: 150px!important;
+}
+
+.card-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  height: 150px;
+}
+
+.card {
+  .card-content {
+    //padding: 0 20px 20px 20px;
+
+    .card-title {
+      line-height: normal;
+    }
+  }
+}
+
+
+
+//CORRIGEREN FUCKING MATERIALIZE
+
+.container {
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+a {
+  color: #5DA8A1;
+}
+
+
+
+// DEVELOPMENT
+
+//.col {
+//  border: 1px solid blue;
+//}
+//
+//.row {
+//  border: 1px solid red;
+//}
+//
+//.container {
+//  background-color: grey;
+//}
