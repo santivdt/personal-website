@@ -43,30 +43,30 @@ html
                             img.photo-santi(src="https://s22.postimg.org/rzsqx2mbl/website1.jpg")
 
 
-                //PROFESSIONAL PROJECTS
-                .row
-                    .col.s12
-                        p.heading Professional Projects
-                .row.no-margin
-                    .col.s12.m4(ng-repeat="project in professionalProjects")
-                        .card
-                            .card-image.waves-effect.waves-block.waves-light.sov-card.activator
-                                img.sov-card.activator(src='https://stemopeenvrouw.com/wp-content/uploads/2017/01/emailsignature-1.png')
-                            .card-content
-                                span.sov-card.card-title.activator.grey-text.text-darken-4
-                                    | Stem op een Vrouw
-                                p.italic 2017
-                                p
-                                    | Co-founder
-                                    span.italic
-                            .card-reveal
-                                span.card-title.grey-text.text-darken-4
-                                    | Stem op een Vrouw
-                                    i.material-icons.right close
-                                p
-                                    | With the upcoming Dutch Elections a group of people decided to try and change something for the better; representation in the parliament. In a very short amount of time we set up a national campaign which got quickly picked up by national media. Also I build the website.
-                                span.link-partner
-                                    a#sov-website(href="https://www.stemopeenvrouw.com", target="_blank") Website
+          
+                    .row
+                        .col.s12
+                            p.heading Professional Projects
+                    .row.no-margin
+                        .col.s12.m4(ng-repeat="project in professionalProjects")
+                            .card
+                                .card-image.waves-effect.waves-block.waves-light.sov-card.activator
+                                    img.sov-card.activator(src='https://stemopeenvrouw.com/wp-content/uploads/2017/01/emailsignature-1.png')
+                                .card-content
+                                    span.sov-card.card-title.activator.grey-text.text-darken-4
+                                        | {{project.name}}
+                                    p.italic 2017
+                                    p
+                                        | {{project.title}}
+                                        span.italic
+                                .card-reveal
+                                    span.card-title.grey-text.text-darken-4
+                                        | {{project.titleBack}}
+                                        i.material-icons.right close
+                                    p
+                                        | {{project.description}}
+                                    span.link-partner
+                                        a#sov-website(href="https://www.stemopeenvrouw.com", target="_blank") Website
 
 
 
