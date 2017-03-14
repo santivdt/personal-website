@@ -25,21 +25,22 @@ html
         .container
             div(ng-app="santi")
                 div(ng-controller="DropdownCtrl")
-                .row
-                    .col.s0.m1
-                    .col.s12.m5.right-align
-                        p.heading Santi van den Toorn | {{hallo}}is a
-                            .input-field
-                                select.icons(ng-model="profession")
-                                    option(value='', disabled='', selected='') choose profession
-                                    option.circle(value='consultant', data-icon='') consultant
-                                    option.circle(value='feminist') feminist
-                                    option.circle(value='developer') developer
-                                    option.circle(value='civil engineer')  civil engineer
-                        p(ng-if="profession == 'none'") Pick a skill Santi posesses to learn more.
-                        button.button(ng-click="santii()") Joe
-                    .col.s12.m5.img
-                        img.photo-santi(src="https://s22.postimg.org/rzsqx2mbl/website1.jpg")
+                    p.heading 
+                    .row
+                        .col.s0.m1
+                        .col.s12.m5.right-align
+                            p.heading Santi van den Toorn | is a {{hallo}}
+                                .input-field
+                                    select.icons(ng-model="profession")
+                                        option(value='', disabled='', selected='') choose profession
+                                        option.circle(value='consultant', data-icon='') consultant
+                                        option.circle(value='feminist') feminist
+                                        option.circle(value='developer') developer
+                                        option.circle(value='civil engineer')  civil engineer
+                            p(ng-if="profession == 'none'") Pick a skill Santi posesses to learn more.
+                            button.button(ng-click="santii()") Joe
+                        .col.s12.m5.img
+                            img.photo-santi(src="https://s22.postimg.org/rzsqx2mbl/website1.jpg")
 
 
                 //PROFESSIONAL PROJECTS
