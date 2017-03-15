@@ -5,17 +5,24 @@ app.controller('DropdownCtrl', function ($scope) {
   console.log('controller is here');
 
 
-  $scope.setProfession = function() {
-    console.log('setprofi');
+
+  $scope.setProfession = function(profession) {
+    console.log('de functie set prof');
+    console.log('profession = ', profession)
   };
 
-  $scope.hallo = "HAL";
+  $scope.generateRandomWoman = function(party) {
+    console.log('Generating random woman from the ', party);
 
-  $scope.setProfession = function() {
-    console.log('de functie set prof')
+    if(party == 'SGP') {
+      $scope.randomWoman = ' ...helaas, er is geen vrouw!';
+    }
+
+
+
+
   };
 
-  $scope.setProfession();
 
 
   $scope.professionalProjects = [

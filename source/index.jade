@@ -25,40 +25,40 @@ html
         .container
             div(ng-app="santi")
                 div(ng-controller="DropdownCtrl")
-                    p.heading 
+                    p.heading
                     .row
                         .col.s0.m1
                         .col.s12.m5.right-align
-                            p.heading Santi van den Toorn | is a {{hallo}}
+                            p.heading Santi van den Toorn | is a
                                 .input-field
-                                    select.icons(ng-model="profession")
-                                        option(value='', disabled='', selected='') choose profession
-                                        option.circle(value='consultant', data-icon='') consultant
-                                        option.circle(value='feminist') feminist
-                                        option.circle(value='developer') developer
-                                        option.circle(value='civil engineer')  civil engineer
-                            p(ng-if="profession == 'none'") Pick a skill Santi posesses to learn more.
-                            button.button(ng-click="santii()") Joe
+                                    select(ng-model="profession")
+                                        option(value='', disabled='', selected='') Choose skill
+                                        option(value='feminist') Feminist
+                                        option(value='thinker') Thinker
+                                        option(value='journalist') Writer
+                                        option(value='activist')  Activist
+                                        option(value='developer')  developer
+                                    label Pick your poison {{profession}}
+                                    button.button(ng-click="setProfession(profession)") Zoek
+                            //p(ng-if="profession == 'none'") Pick a skill Santi posesses to learn more.
+                            p {{profession}} hier
                         .col.s12.m5.img
                             img.photo-santi(src="https://s22.postimg.org/rzsqx2mbl/website1.jpg")
-
-
-          
                     .row
                         .col.s12
                             p.heading Professional Projects
                     .row.no-margin
                         .col.s12.m4(ng-repeat="project in professionalProjects")
                             .card
-                                .card-image.waves-effect.waves-block.waves-light.sov-card.activator
-                                    img.sov-card.activator(src='https://stemopeenvrouw.com/wp-content/uploads/2017/01/emailsignature-1.png')
+                                .card-image.waves-effect.waves-block.waves-light.activator(class="{{project.className}}-card")
+                                    img.activator(src='{{project.img}}', class="{{project.className}}-card")
                                 .card-content
-                                    span.sov-card.card-title.activator.grey-text.text-darken-4
+                                    span.card-title.activator.grey-text.text-darken-4(class="{{project.className}}-card")
                                         | {{project.name}}
-                                    p.italic 2017
+                                    p.italic {{project.time}}
                                     p
                                         | {{project.title}}
-                                        span.italic
+                                        span.italic &nbsp;{{project.titleItalic}}
                                 .card-reveal
                                     span.card-title.grey-text.text-darken-4
                                         | {{project.titleBack}}
@@ -66,9 +66,7 @@ html
                                     p
                                         | {{project.description}}
                                     span.link-partner
-                                        a#sov-website(href="https://www.stemopeenvrouw.com", target="_blank") Website
-
-
+                                        a(href="{{project.website}}", target="_blank", id="{{project.className}}-website") Website
 
                 .row
                     .col.s12
