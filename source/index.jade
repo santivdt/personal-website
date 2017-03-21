@@ -70,44 +70,28 @@ html
 
                 .row
                     .col.s12
-                        p.heading Personal Projects
+                        p.heading Personal Projects {{personalProjects}}
                 .row.no-margin
-                    .col.s12.m4
+                    .col.s12.m4(ng-repeat="project in personalProjects")
                         .card
-                            .abc-card.card-image.waves-effect.waves-block.waves-light.activator
-                                img.abc-card.activator(src='https://s30.postimg.org/ic1krqe75/abc.png')
+                            .card-image.waves-effect.waves-block.waves-light.activator(class="{{project.className}}-card")
+                                img.activator(src='{{project.img}}', class="{{project.className}}-card")
                             .card-content
-                                span.abc-card.card-title.activator.grey-text.text-darken-4
-                                    | ABC Amsterdam
-                                p.italic 2016 - 2017
+                                span.card-title.activator.grey-text.text-darken-4(class="{{project.className}}-card")
+                                    | {{project.name}}
+                                p.italic {{project.time}}
                                 p
-                                    | Voluntary teaching
+                                    | {{project.title}}
+                                    span.italic &nbsp;{{project.titleItalic}}
                             .card-reveal
                                 span.card-title.grey-text.text-darken-4
-                                    | ABC Amsterdam
+                                    | {{project.titleBack}}
                                     i.material-icons.right close
                                 p
-                                    | ABC is a foundation that helps isolated women on their way to self-reliance through individual language classes. I am involved as one of their voluntary teachers and teach English to a Ghanaian mother (25) of two.
+                                    | {{project.description}}
                                 span.link-partner
-                                    a#abc-website(href="https://www.abcamsterdam.org/", target="_blank") Website
-                    .col.s12.m4
-                        .card
-                            .eli-card.card-image.waves-effect.waves-block.waves-light.activator
-                                img.eli-card.activator(src='https://s27.postimg.org/iip3xjgoj/oma.jpg')
-                            .card-content
-                                span.eli-card.card-title.activator.grey-text.text-darken-4
-                                    | Elisabeth van der Lek
-                                p.italic 2016 - 2017
-                                p
-                                    | Website
-                            .card-reveal
-                                span.card-title.grey-text.text-darken-4
-                                    | Elisabeth van der Lek
-                                    i.material-icons.right close
-                                p
-                                    | I developed a simple Wordpress website for my 92 year old Grandmother. She is a painter and wanted to showcase her work online. She has never seen a website herself though and finds it hard to grasp what it is and how it works. When asked for her favourite colour, for the design, she was surprised that websites were in colour.
-                                span.link-partner
-                                    a#eli-website(href="https://www.elisabethvanderlek.nl/", target="_blank") Website
+                                    a(href="{{project.website}}", target="_blank", id="{{project.className}}-website") Website
+
                 .row
                     .col.s12
                         p.heading Writing

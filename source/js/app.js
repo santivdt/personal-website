@@ -78,6 +78,28 @@ app.controller('DropdownCtrl', function ($scope) {
     }
       ]
 
+  $scope.personalProjects = [
+    {
+      "img": "https://s30.postimg.org/ic1krqe75/abc.png",
+      "name": "ABC Amsterdam",
+      "time": "2016 - 2017",
+      "title": "Voluntary teaching",
+      "titleBack": "ABC Amsterdam",
+      "description": "ABC is a foundation that helps isolated women on their way to self-reliance through individual language classes. I am involved as one of their voluntary teachers and teach English to a Ghanaian mother (25) of two.",
+      "website": "https://www.abcamsterdam.org/",
+      "className": "abc"
+    },{
+      "img": "https://s27.postimg.org/iip3xjgoj/oma.jpg",
+      "name": "Elisabeth van der Lek",
+      "time": "2016 - 2017",
+      "title": "Website",
+      "titleBack": "Elisabeth van der Lek",
+      "description": "I developed a simple Wordpress website for my 92 year old Grandmother. She is a painter and wanted to showcase her work online. She has never seen a website herself though and finds it hard to grasp what it is and how it works. When asked for her favourite colour, for the design, she was surprised that websites were in colour.",
+      "website": "https://www.elisabethvanderlek.nl",
+      "className": "eli"
+    }
+  ]
+
 
 });
 
