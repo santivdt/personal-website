@@ -3,11 +3,16 @@ html {
 }
 
 .row {
-  margin-top: 10%;
+  margin-top: 5%;
 
   &.no-margin {
     margin: 0;
   }
+}
+
+p.text.skills {
+  font-size: 12px;
+  font-style: italic;
 }
 
 p.heading {
@@ -16,6 +21,15 @@ p.heading {
   letter-spacing: 5px;
   font-family: Roboto, sans-serif;
   margin-top: 0;
+}
+
+h2 {
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-family: Roboto, sans-serif;
+  margin-top: 0;
+  font-size: 20px;
 }
 
 p.text {
@@ -46,6 +60,10 @@ p.social-icons {
     }
   }
 }
+p.caption {
+  color: grey;
+  font-size: 10px;
+}
 
 
 .italic {
@@ -54,6 +72,13 @@ p.social-icons {
   color: #CCC;
 }
 
+img.skills {
+  width: 100%;
+
+  &.logo {
+    width: 50%;
+  }
+}
 
 //TOOLTIP
 
@@ -148,17 +173,3 @@ nav {
   }
 }
 
-
-// DEVELOPMENT
-
-//.col {
-//  border: 1px solid blue;
-//}
-//
-//.row {
-//  border: 1px solid red;
-//}
-//
-//.container {
-//  background-color: grey;
-//}

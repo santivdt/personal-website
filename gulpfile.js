@@ -1,14 +1,13 @@
 var gulp   = require('gulp'),
-    sass   = require('gulp-sass'),
-    jade   = require('gulp-jade'),
-    connect = require('gulp-connect'),
-    watch = require('gulp-watch'),
-    util = require('gulp-util'),
-    sourcemaps = require('gulp-sourcemaps'),
-    livereload = require('gulp-refresh'),
-    concat = require('gulp-concat'),
-    runSequence = require('run-sequence');
-
+  sass   = require('gulp-sass'),
+  jade   = require('gulp-jade'),
+  concat = require('gulp-concat'),
+  connect = require('gulp-connect'),
+  watch = require('gulp-watch'),
+  util = require('gulp-util'),
+  sourcemaps = require('gulp-sourcemaps'),
+  livereload = require('gulp-refresh'),
+  runSequence = require('run-sequence');
 
 // This will run in this order:
 // * connect
@@ -16,7 +15,7 @@ var gulp   = require('gulp'),
 // * jade and sass in parallel
 // * Finally call the callback function
 gulp.task('default', function(callback) {
-  runSequence('connect', 'watch', 'jade', 'build-css',
+  runSequence('connect', 'watch', 'jade', 'build-css', 'scripts', 'json',
     callback);
 });
 
@@ -26,6 +25,8 @@ gulp.task('watch', function() {
   livereload.listen();
   gulp.watch('source/styles/*.scss', ['build-css']);
   gulp.watch('source/*.jade', ['jade']);
+  gulp.watch('source/js/*.js', ['scripts']);
+  gulp.watch('source/*.json', ['json']);
 });
 
 // CONNECT: Connect to local server
@@ -54,6 +55,21 @@ gulp.task('jade', function() {
       pretty: true
     }))
     .pipe(gulp.dest('public'))
+    .pipe(livereload());
+});
+
+/* Javascript Task */
+gulp.task('scripts', function() {
+  return gulp.src('source/js/*.js')
+    .pipe(concat('main.js'))
+    .pipe(gulp.dest('public/js'))
+    .pipe(livereload());
+});
+
+/* Json Task */
+gulp.task('json', function() {
+  return gulp.src('source/*.json')
+    .pipe(gulp.dest('public/'))
     .pipe(livereload());
 });
 
