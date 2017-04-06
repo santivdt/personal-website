@@ -128,6 +128,25 @@ a {
   color: #5DA8A1;
 }
 
+nav {
+  background-color: white;
+  color: black;
+  box-shadow: none;
+
+  li {
+    a {
+      color: black;
+    }
+
+    a:hover {
+      background-color: white;
+    }
+
+    &:hover {
+      border-bottom: 1px solid black;
+    }
+  }
+}
 
 
 // DEVELOPMENT
