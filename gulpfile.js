@@ -24,7 +24,7 @@ gulp.task('watch', function() {
   // Create LiveReload server
   livereload.listen();
   gulp.watch('source/styles/*.scss', ['build-css']);
-  gulp.watch('source/*.jade', ['jade']);
+  gulp.watch('source/**/*.jade', ['jade']);
   gulp.watch('source/js/*.js', ['scripts']);
   gulp.watch('source/*.json', ['json']);
 });

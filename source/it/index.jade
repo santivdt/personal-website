@@ -1,5 +1,29 @@
 html
-    include ../includes/header.jade
+    head
+        script.
+            // Google Tag Manager
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    'gtm.start': new Date().getTime(), event: 'gtm.js'
+                });
+                var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src =
+                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-WZ2TJ2');
+            //End Google Tag Manager
+        title Santi van den Toorn
+        // Materialize and Fontawesome
+        link(href='http://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css')
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css', type='text/css')
+        link(rel='stylesheet', type='text/css', href='../styles/styles.css')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        link(rel='icon', type='image/png', href='https://postimg.org/image/8c17ifa0f/', sizes='32x32')
+        link(rel='icon', type='image/png', href='https://postimg.org/image/m6zi0w4fj/', sizes='16x16')
     body
         // Google Tag Manager (noscript)
         noscript
@@ -13,40 +37,35 @@ html
                     img.skills.logo(src="http://www.santivandentoorn.com/img/bleeve.png")
                 .col.s12.m7
                     h2 Programmeur en scrum master
-                    p.text Bij Bleeve was ik onderdeel van het front-end team. Ik ontwikkelde mee aan de applicatie die open-data verzamelt en gebruikt om mensen informatie te verstrekken over de duurzaamheid van hun huis. Later werd ik ook scrum master. Ik was verantwoordelijk voor de dagelijkse stand-up, sprint planning en inschatting van de taken. Tevens zorgde ik ervoor dat het team alles had om ongestoord te kunnen werken (assets, designs, duidelijke feature- en taakomschrijving).
-                    p.text.skills Front-end, project management, programmeren, Amsterdam.
+                    p.text Bij Bleeve werkte ik als programmeur (front-end) en later ook als scrummaster. Ik bouwde mee aan een applicatie die met behulp van open-data inzicht geeft in energieverbuik van huizen. Ook leidde ik de dagelijkse stand-up, plande de sprints op basis van prioriteit en beschikbare capaciteit, faciliteerde een vlekkeloze samenwerking binnen het team en een soepele communicatie naar de product-owner, designers en business.
                     p.text
-                        a(href="http://www.bleeve.nl", target="blank") www.bleeve.nl
+                        a#bleeve-website(href="http://www.bleeve.nl", target="blank") www.bleeve.nl
             .row
                 .col.s12.m7
                     h2 Platform supervisor
-                    p.text Bij Oneplanetcrowd stuurde ik de programmeurs aan. Ik was de brug tussen het managementteam en het developmentteam. Ik dacht mee over de functionaliteiten en roadmap van het product. Dit hield ook in dat ik verantwoordelijk was voor budget en planning. Daarnaast was ik verantwoordelijk voor de integratie van verschillende fin-tech oplossingen om een lening-administratie-systeem te realiseren. Ook was ik het eerste aanspreekpunt voor gebruikers van het platform.
-                    p.text.skills Front-end, project management, programmeren.
+                    p.text Bij Oneplanetcrowd had ik een divers takenpakket. Ik stuurde de programmeurs aan, dacht de technische functionaliteiten conceptueel uit en prioriteerde wensen en eisen van diverse stakeholders. Ook was ik verantwoordelijk voor het IT budget. Ik werkte ook aan de integratie van verscheidene fintech oplossingen ten behoeve van een lening-administratie systeem. Ik was het eerste aanspreekpunt voor klanten en gebruikers van het platform als zij vragen of problemen hadden.
                     p.text
-                        a(href="http://www.oneplanetcrowd.com", target="_blank") www.oneplanetcrowd.com
+                        a#oneplanetcrowd-website(href="http://www.oneplanetcrowd.com", target="_blank") www.oneplanetcrowd.com
                 .col.s12.m5.hide-on-med-and-down.center-align
                     img.skills.logo(src="http://www.santivandentoorn.com/img/opc.png")
             .row
                 .col.s12.m5.hide-on-med-and-down.center-align
                     img.skills.logo(src="http://www.santivandentoorn.com/img/ttcmobile.png")
                 .col.s12.m7
-                    h2 Functioneel analyst
-                    p.text Bij TTC was ik de link tussen project managers in het veld (Afrika, Azië en Zuid Amerika) en de programmeurs. Wensen kwamen vanuit het veld en moesten vertaald worden naar technische functionaliteiten en beoordeeld worden op urgentie en prioriteit. Het systeem moest getest worden en gedocumenteerd. Daarnaast heb ik meegeschreven aan verscheidene proposals.
-                    p.text.skills Task management. Software development. SMS campaining. Social justice. Social change. Marketing. Mailchimp.
+                    h2 Functioneel analyst (2013)
+                    p.text Bij TTC begon ik als communicatie stagiaire en was ik mede verantwoordelijke voor social media, nieuwsbrieven e.d. Al snel kreeg ik meer bevoegdheden en was ik de link tussen klanten van de SMS-software in het veld (Zuid Amerika, Azië en Afrika) en de programmeurs. Ik prioriteerde aanvragen voor nieuwe functionaliteiten, documenteerde het platform en testte nieuw gebouwde features. Daarnaast schreef ik ook mee aan subsidieaanvragen.
                     p.text
-                        a(href="http://www.ttcmobile.com", target="blank") www.ttcmobile.com
+                        a#ttc-website(href="http://www.ttcmobile.com", target="blank") www.ttcmobile.com
             .row
                 .col.s12.m7
                     h2 Online Coördinator
-                    p.text Bij OneWorld ben ik verantwoordelijk voor de ontwikkeling van de nieuwe website; een platform met vernieuwde en een verbeterde lezerservaring en een nieuw community-model. Verder regel ik zaken als Google Analytics, technisch support en schrijf ik artikelen.
-                    p.text.skills Google Analytics. Search engine optimization (SEO). Partners. NGO's. Journalistiek. Mailchimp. Nieuwsbrieven. Emailfunnels. Marketing.
+                    p.text Bij OneWorld ben ik verantwoordelijk voor de ontwikkeling van een geheel vernieuwd platform met verbeterde gebruikerservaring. Daarnaast zorg ik voor de technische optimalisatie van de huidige systemen door o.a. de vele bij deze infrastructuur betrokken partijen aan te sturen . Ik denk mee over de (email) funnels voor klanten, ben thema-eigenaar Feminisme en schrijf zo nu en dan een stuk voor op de website.
                     p.text
-                        a(href="http://www.oneworldnl", target="blank") www.oneworld.nl
-
-                .col.s12.m5.center-align
+                        a#one-world-website(href="http://www.oneworldnl", target="blank") www.oneworld.nl
+                .col.s12.m5.hide-on-med-and-down.center-align
                     img.skills.logo(src="http://www.santivandentoorn.com/img/oneworld.png")
 
-            include ../includes/footer.jade
+    include ../includes/footer.jade
 
         script(type='text/javascript', src='https://code.jquery.com/jquery-2.1.1.min.js')
         script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js')
