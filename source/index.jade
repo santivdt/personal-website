@@ -22,18 +22,7 @@ html
         noscript
             iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-WZ2TJ2', height='0', width='0', style='display:none;visibility:hidden')
         // End Google Tag Manager (noscript)
-        div.navbar-fixed
-                nav
-                    .nav-wrapper
-                        ul.right
-                            li
-                                a(href='http://www.santivandentoorn.com') Home
-                            li
-                                a(href='http://www.santivandentoorn.com/blog') Blog
-                            li
-                                a(href='mailto:santi.vdt@gmail.com') Contact
-                            li
-                                a(href="http://www.santivandentoorn.com") English
+        include includes/nav.jade
         .container
             .row
                 .col.s0.m1
@@ -138,10 +127,7 @@ html
                                 td OneWorld
                                 td Maart 2017
 
-            .row
-                .col.s12.center-align
-                    p.text
-                        a(href="http://www.santivandentoorn.com/av.pdf", target="_new") Terms and conditions
+            include includes/footer.jade
 
 
 

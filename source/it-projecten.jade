@@ -22,16 +22,7 @@ html
         noscript
             iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-WZ2TJ2', height='0', width='0', style='display:none;visibility:hidden')
         // End Google Tag Manager (noscript)
-        div.navbar-fixed
-            nav
-                .nav-wrapper
-                    ul.right
-                        li
-                            a(href='http://www.santivandentoorn.com') Home
-                        li
-                            a(href='http://www.santivandentoorn.com/blog') Blog
-                        li
-                            a(href="http://www.santivandentoorn.com") English
+        include includes/nav.jade
         .container
             //SKILLS
             .row
@@ -72,12 +63,8 @@ html
 
                 .col.s12.m5.center-align
                     img.skills.logo(src="http://www.santivandentoorn.com/img/oneworld.png")
-            .row
-                .col.s12.center-align
-                    p.text
-                        a(href="http://www.santivandentoorn.com/av.pdf", target="_new") Terms and conditions
 
-
+            include includes/footer.jade
 
         script(type='text/javascript', src='https://code.jquery.com/jquery-2.1.1.min.js')
         script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js')
