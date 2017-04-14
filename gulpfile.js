@@ -50,7 +50,7 @@ gulp.task('build-css', function() {
 
 /* JADE task */
 gulp.task('jade', function() {
-  return gulp.src('source/*.jade')
+  return gulp.src('source/**/*.jade')
     .pipe(jade({
       pretty: true
     }))
