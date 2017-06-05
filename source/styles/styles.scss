@@ -1,5 +1,21 @@
+@import 'media';
+
 html {
   font-family: Calibri, Trebuchet, sans-serif;
+}
+
+body {
+  @include mobile {
+    //background-color: blue;
+  }
+
+  @include tablet {
+    //background-color: green;
+  }
+
+  @include desktop {
+    //background-color: purple;
+  }
 }
 
 .row {
@@ -7,6 +23,14 @@ html {
 
   &.no-margin {
     margin: 0;
+  }
+
+  &.no-mb {
+    margin-bottom: 0;
+
+    h2 {
+      margin-bottom: 25px;
+    }
   }
 }
 
@@ -20,6 +44,10 @@ p.heading {
   text-transform: uppercase;
   letter-spacing: 5px;
   font-family: Roboto, sans-serif;
+  margin-top: 0;
+}
+
+p.nm-top {
   margin-top: 0;
 }
 
@@ -80,67 +108,8 @@ img.skills {
   }
 }
 
-//TOOLTIP
 
-
-.tooltip {
-  position: relative;
-  display: inline-block;
-}
-
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  /* Position the tooltip */
-  position: absolute;
-  z-index: 1;
-  top: 100%;
-  left: 50%;
-  margin-left: -60px;
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-}
-
-
-
-//CARD ADJUSTMENTS
-.card-title {
-  font-size: 15px!important;
-  text-transform: uppercase;
-}
-
-img.activator {
-  width: 150px!important;
-}
-
-.card-image {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 10px;
-  height: 150px;
-}
-
-.card {
-  .card-content {
-    //padding: 0 20px 20px 20px;
-
-    .card-title {
-      line-height: normal;
-    }
-  }
-}
-
-
-
-//CORRIGEREN FUCKING MATERIALIZE
+//CORRIGEREN  MATERIALIZE
 
 .container {
   .row {
@@ -171,5 +140,9 @@ nav {
       border-bottom: 1px solid black;
     }
   }
+}
+
+.card-content.websites {
+  display: none;
 }
 
