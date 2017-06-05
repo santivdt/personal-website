@@ -1,0 +1,74 @@
+html
+    head
+        script.
+            // Google Tag Manager
+            (function(w,d,s,l,i){w[l] = w[l] || [];w[l].push({'gtm.start':
+                    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-WZ2TJ2');
+            //End Google Tag Manager
+        title Santi van den Toorn
+        // Materialize and Fontawesome
+        link(href='http://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css')
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css', type='text/css')
+        link(rel='stylesheet', type='text/css', href='styles/styles.css')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        link(rel='icon', type='image/png', href='https://postimg.org/image/8c17ifa0f/', sizes='32x32')
+        link(rel='icon', type='image/png', href='https://postimg.org/image/m6zi0w4fj/', sizes='16x16')
+    body
+        // Google Tag Manager (noscript)
+        noscript
+            iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-WZ2TJ2', height='0', width='0', style='display:none;visibility:hidden')
+        // End Google Tag Manager (noscript)
+        include includes/nav.jade
+        .container
+            .row
+                .col.s12.m3
+                    .card
+                        .card-image
+                            img(src="http://www.santivandentoorn.com/img/sov.png")
+                            span.card-title
+                        .card-content.websites
+                        .card-action
+                            a(href='http://www.stemopeenvrouw.com', target="new") Stemopeenvrouw.com
+                .col.s12.m3
+                    .card
+                        .card-image
+                            img(src="http://www.santivandentoorn.com/img/laisla.png")
+                            span.card-title
+                        .card-content.websites
+                        .card-action
+                            a(href='http://www.laislabonita.nl', target="new") La Isla Bonita
+                .col.s12.m3
+                    .card
+                        .card-image
+                            img(src="http://www.santivandentoorn.com/img/bregje.png")
+                            span.card-title
+                        .card-content.websites
+                        .card-action
+                            a(href='http://www.bregjehofstede.nl', target="new") Bregje Hofstede
+                .col.s12.m3
+                    .card
+                        .card-image
+                            img(src="http://www.santivandentoorn.com/img/lama.png")
+                            span.card-title
+                        .card-content.websites
+                        .card-action
+                            a(href='http://www.lamas-et-promenades-66.fr', target="new") Les Camelides
+
+
+
+
+            include includes/footer.jade
+
+
+
+        script(type='text/javascript', src='https://code.jquery.com/jquery-2.1.1.min.js')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js')
+        script(src="js/main.js")
+
+
+
+
